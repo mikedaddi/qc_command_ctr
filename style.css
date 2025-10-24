@@ -1,0 +1,111 @@
+/* 🟦 Panther Command Center Layout */
+
+body.dark-mode {
+  background-color: #000000;
+  color: #1E90FF;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar-feeds {
+  width: 280px;
+  background-color: #000000;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 2px solid #1E90FF;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #000000;
+}
+
+.app-title,
+.app-logo,
+.feeds-heading {
+  color: #1E90FF;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #000000;
+  border: 1px solid #1E90FF;
+  color: #1E90FF;
+  padding: 8px 12px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1E90FF;
+  color: #000000;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #1E90FF;
+  background-color: #000000;
+  color: #1E90FF;
+}
+
+#feed-list-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.article-container h2 {
+  margin-top: 30px;
+  font-size: 1.4em;
+  color: #1E90FF;
+}
+
+.article {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #1E90FF;
+  padding-bottom: 10px;
+}
+
+.article h3 a {
+  color: #1E90FF;
+  text-decoration: none;
+}
+
+.article p {
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+/* 📱 Responsive Fix */
+@media screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar-feeds {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #1E90FF;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  #feed-list-container {
+    max-height: 40vh;
+  }
+}

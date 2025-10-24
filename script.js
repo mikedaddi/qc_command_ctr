@@ -33,17 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   { name: "PIKA MAX Briefings", url: "https://pikamax.substack.com/feed" },
   { name: "Queen City Drive", url: "https://queencitydrive.blogspot.com/feeds/posts/default?alt=rss" },
 
-  // 📰 Charlotte News Stations
   { name: "WSOC-TV (Channel 9)", url: "https://www.wsoctv.com/pf/feeds/" },
   { name: "WBTV (Channel 3)", url: "https://www.wbtv.com/pf/core/feeds/rss/" },
   { name: "WCNC Charlotte (Channel 36)", url: "https://www.wcnc.com/feeds" },
 
-  // 🎭 Local Culture & Events
   { name: "CLTure", url: "https://clture.org/feed/" },
   { name: "Axios Charlotte", url: "https://charlotte.axios.com/rss" },
   { name: "AllEvents Charlotte", url: "https://allevents.in/charlotte/rss" },
   { name: "Eventbrite Charlotte", url: "https://www.eventbrite.com/d/nc--charlotte/events/rss/" },
-  // For Meetup, add specific group feeds manually
 ];
 
   ];
@@ -355,3 +352,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+

@@ -29,15 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- State & Defaults ---------- */
   const DEFAULT_FEEDS = [
-    { name: "BBC World News", url: "https://feeds.bbci.co.uk/news/world/rss.xml" },
-    { name: "ABC News (US)", url: "https://abcnews.go.com/abcnews/topstories" },
-    { name: "Fox News", url: "https://feeds.foxnews.com/foxnews/latest" },
-    { name: "TMZ Entertainment", url: "https://www.tmz.com/rss.xml" },
-    { name: "TechCrunch", url: "https://techcrunch.com/feed/" },
-    { name: "Wired Tech", url: "https://www.wired.com/feed/rss" },
-    { name: "AccuWeather News", url: "https://rss.accuweather.com/rss/top-stories" },
-    { name: "The Hollywood Reporter", url: "https://www.hollywoodreporter.com/c/news/feed" },
-    { name: "ET Online Entertainment", url: "https://www.etonline.com/news/rss" }
+    { name: "Lucky Pikas Blog", url: "https://luckypikas.blogspot.com/feeds/posts/default?alt=rss" },
+  { name: "PIKA MAX Briefings", url: "https://pikamax.substack.com/feed" },
+  { name: "Queen City Drive", url: "https://queencitydrive.blogspot.com/feeds/posts/default?alt=rss" },
+
+  // 📰 Charlotte News Stations
+  { name: "WSOC-TV (Channel 9)", url: "https://www.wsoctv.com/pf/feeds/" },
+  { name: "WBTV (Channel 3)", url: "https://www.wbtv.com/pf/core/feeds/rss/" },
+  { name: "WCNC Charlotte (Channel 36)", url: "https://www.wcnc.com/feeds" },
+
+  // 🎭 Local Culture & Events
+  { name: "CLTure", url: "https://clture.org/feed/" },
+  { name: "Axios Charlotte", url: "https://charlotte.axios.com/rss" },
+  { name: "AllEvents Charlotte", url: "https://allevents.in/charlotte/rss" },
+  { name: "Eventbrite Charlotte", url: "https://www.eventbrite.com/d/nc--charlotte/events/rss/" },
+  // For Meetup, add specific group feeds manually
+];
+
   ];
 
   let feeds = [];
@@ -344,5 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // start
   initialize();
+
 
 });

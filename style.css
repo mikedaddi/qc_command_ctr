@@ -1,0 +1,143 @@
+/* style.css — DEEVO Charlotte Dark Edition */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #f0f0f0;
+  background: #0c0c0c;
+  display: flex;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar-feeds {
+  width: 260px;
+  background: #161616;
+  border-right: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sidebar-top {
+  flex: 0 0 auto;
+}
+
+.app-logo {
+  font-size: 1.5rem;
+  color: #f9d65c;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(249,214,92,0.3);
+}
+
+.btn {
+  background: #262626;
+  color: #f0f0f0;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  margin: 0.2rem 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+.btn.primary {
+  background: #f9d65c;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background: #ffd94f;
+}
+
+.search-bar input {
+  width: calc(100% - 40px);
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #eee;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.search-btn {
+  background: #333;
+  color: #eee;
+  border-radius: 6px;
+}
+
+.feed-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.feed-item {
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.feed-item:hover {
+  background: #222;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1rem 2rem;
+  overflow-y: auto;
+}
+
+.app-title {
+  color: #f9d65c;
+  text-shadow: 0 0 10px rgba(249,214,92,0.3);
+  font-size: 1.6rem;
+}
+
+.article-card {
+  background: #181818;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.article-card h2 a {
+  color: #f9d65c;
+  text-decoration: none;
+}
+
+.article-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.article-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.loading-note, .error {
+  color: #f9d65c;
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .sidebar-feeds {
+    width: 200px;
+  }
+  .app-title {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
+  <title>DEEVO — News Command Center</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark-mode">
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar-feeds" role="navigation" aria-label="Feeds sidebar">
+      <div class="sidebar-top">
+        <h1 class="app-logo">DEEVO</h1>
+        <h2 class="feeds-heading">My Feeds</h2>
+
+        <div class="sidebar-controls">
+          <button id="add-feed-btn" class="btn primary"><i class="fas fa-plus"></i> Add Feed</button>
+          <button id="reset-feeds-btn" class="btn"><i class="fas fa-undo"></i> Reset</button>
+          <button id="set-default-btn" class="btn"><i class="fas fa-star"></i> Set as Default</button>
+          <button id="bookmarks-btn" class="btn"><i class="fas fa-bookmark"></i> Bookmarks</button>
+        </div>
+
+        <form id="search-form" class="search-bar" target="_blank" aria-label="Search the web">
+          <input id="search-input" type="search" placeholder="Search the web (press Enter)" />
+          <button type="submit" class="btn search-btn" title="Search"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+
+      <!-- Feed List (scrollable) -->
+      <div id="feed-list-container">
+        <div id="feed-list" class="feed-list" aria-live="polite">
+
+          <!-- 🏙️ Charlotte News Feeds -->
+          <div data-name="PikaMax Substack" data-url="https://pikamax.substack.com/feed"></div>
+          <div data-name="Lucky Pikas Blog" data-url="https://luckypikas.blogspot.com/feeds/posts/default?alt=rss"></div>
+          <div data-name="Queen City Drive" data-url="https://queencitydrive.blogspot.com/feeds/posts/default?alt=rss"></div>
+          <div data-name="WSOC-TV Charlotte" data-url="https://www.wsoctv.com/pf/feeds/"></div>
+          <div data-name="WBTV News" data-url="https://www.wbtv.com/pf/core/feeds/rss/"></div>
+          <div data-name="WCNC News" data-url="https://www.wcnc.com/feeds"></div>
+          <div data-name="CLTure Charlotte" data-url="https://clture.org/feed/"></div>
+          <div data-name="Axios Charlotte" data-url="https://charlotte.axios.com/rss"></div>
+          <div data-name="All Events in Charlotte" data-url="https://allevents.in/charlotte/rss"></div>
+          <div data-name="Eventbrite Charlotte" data-url="https://www.eventbrite.com/d/nc--charlotte/events/rss/"></div>
+
+          <!-- 🎭 Entertainment Feeds (unchanged) -->
+          <div data-name="Entertainment Feed 1" data-url="https://example-entertainment-feed1.com/rss"></div>
+          <div data-name="Entertainment Feed 2" data-url="https://example-entertainment-feed2.com/rss"></div>
+
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <small>Saved locally • Persistent</small>
+      </div>
+    </aside>
+
+    <!-- Main Area -->
+    <main class="main-content" role="main">
+      <header class="app-header">
+        <h1 class="app-title">News Command Center</h1>
+      </header>
+
+      <section id="article-container" class="article-container" aria-live="polite">
+        <p class="loading-note">Loading feeds...</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add Feed Modal -->
+  <div id="add-feed-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="add-feed-title">
+    <div class="modal-content">
+      <h3 id="add-feed-title">Add New Feed</h3>
+      <label>Feed Name
+        <input id="feed-name-input" type="text" placeholder="Example: BBC World News" />
+      </label>
+      <label>Feed URL
+        <input id="feed-url-input" type="url" placeholder="https://feeds.bbci.co.uk/news/world/rss.xml" />
+      </label>
+      <div class="modal-actions">
+        <button id="save-feed-btn" class="btn primary">Save</button>
+        <button id="cancel-feed-btn" class="btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bookmarks Modal -->
+  <div id="bookmarks-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="bookmarks-title">
+    <div class="modal-content large">
+      <h3 id="bookmarks-title">🔖 Bookmarked Articles</h3>
+      <div id="bookmarks" class="bookmarks-list"></div>
+      <div class="modal-actions">
+        <button id="close-bookmarks-btn" class="btn">Close</button>
+        <button id="clear-bookmarks-btn" class="btn danger">Clear All</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
